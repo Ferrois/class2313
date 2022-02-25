@@ -11,12 +11,12 @@ export default function GlobalLogs() {
   const [sum, setSum] = useState(0);
 
   useEffect(async () => {
-    let total = await axios.get("https://furthermathgang-api/total");
+    let total = await axios.get("https://furthermathgang-api.herokuapp.com/total");
     setSum(total.data);
   });
 
   useEffect(async () => {
-    const logsReq = await axios.get("https://furthermathgang-api/logs");
+    const logsReq = await axios.get("https://furthermathgang-api.herokuapp.com/logs");
     let logsArray = logsReq.data;
     setLogs(logsArray);
   }, []);

@@ -11,7 +11,7 @@ function App() {
   const [code, setCode] = useState();
   const [login, setLogin] = useContext(LoginContext);
   useEffect(async () => {
-    const recCode = await axios.get("https://furthermathgang-api/logintokencode");
+    const recCode = await axios.get("https://furthermathgang-api.herokuapp.com/logintokencode");
     setCode(recCode.data);
   }, []);
   useEffect(() => {
