@@ -11,12 +11,12 @@ export default function GlobalLogs() {
   const [sum, setSum] = useState(0);
 
   useEffect(async () => {
-    let total = await axios.get("http://localhost:4000/total");
+    let total = await axios.get("https://furthermathgang-api/total");
     setSum(total.data);
   });
 
   useEffect(async () => {
-    const logsReq = await axios.get("http://localhost:4000/logs");
+    const logsReq = await axios.get("https://furthermathgang-api/logs");
     let logsArray = logsReq.data;
     setLogs(logsArray);
   }, []);

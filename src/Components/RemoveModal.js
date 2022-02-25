@@ -12,7 +12,7 @@ export default function AddModal({ show, handleClose }) {
       reason: `For ${reasonRef.current.value}`
     };
     try {
-      axios.post("http://localhost:4000/logs", logInfo);
+      axios.post("https://furthermathgang-api/logs", logInfo);
       alert("Successfully logged the usage!! Please refresh the page in order to reflect the changes onto the global logs.")
     } catch (err) {
       alert(`Error! : ${err}`);
