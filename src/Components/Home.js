@@ -45,7 +45,7 @@ export default function Home() {
           let dispDate = date.toString();
           dispDate = dispDate.split(" ").slice(0, -2).join(" ");
           return (
-            <Card className="bg-light">
+            <Card className="bg-light mb-1">
               <Card.Body>
                 <Card.Title>{post.name}</Card.Title>
                 <Card.Text>{post.content}</Card.Text>
