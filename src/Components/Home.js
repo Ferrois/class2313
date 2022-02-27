@@ -43,7 +43,9 @@ export default function Home() {
         {posts.map((post) => {
           let date = new Date(post.time);
           let dispDate = date.toString();
-          dispDate = dispDate.split(" ").slice(0, -2).join(" ");
+          // dispDate = dispDate.split(" ").slice(0, -2).join(" ");
+          dispDate = dispDate.substring(0,24);
+          
           return (
             <Card className="bg-light mb-1">
               <Card.Body>
