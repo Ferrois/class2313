@@ -46,7 +46,8 @@ export default function Funds() {
           }
           let date = new Date(log.time);
           let dispDate = date.toString();
-          dispDate = dispDate.split(" ").slice(0, -2).join(" ");
+          //dispDate = dispDate.split(" ").slice(0, -2).join(" ");
+          dispDate = dispDate.substring(0,24);
           return (
             <>
               <div className="mb-1 bg-dark text-white p-1 rounded">
